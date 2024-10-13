@@ -76,15 +76,31 @@ Comments blocks are helping text in a Lua program, which are ignored by the
 A single line comment is annotated with the '--' characters.
 
 
+Lua identifiers is the name used to identify a variable, function, or any other
+ user-defined item. An identifier starts with a letter, capital or lowercase,
+  or an underscore, followed by zero or more letters, numbers, and underscores.
+
+Lua does not allow punction characters (@, $, and %) within identifiers. Lua
+ is also case sensitive, so a variable named "Manpower", will be different from
+  the variable "manpower".
+
+In the table below are reserved keywords that cannot be assigned as identifiers
+ in Lua. They are already reserved words.
 
 
-
-
-
-
-
-
-
+┌────────────┬─────────┬───────┬────────┐
+│     and    │  break  │  do   │  else  │
+├────────────┼─────────┼───────┼────────┤
+│   elseif   │   end   │ false │  for   │
+├────────────┼─────────┼───────┼────────┤
+│  function  │   if    │  in   │ local  │
+├────────────┼─────────┼───────┼────────┤
+│     nil    │   not   │  or   │ repeat │
+├────────────┼─────────┼───────┼────────┤
+│   return   │  then   │ true  │  until │
+├────────────┼─────────┼───────┼────────┤
+│   while    │         │       │        │
+└────────────┴─────────┴───────┴────────┘
 
 
 
