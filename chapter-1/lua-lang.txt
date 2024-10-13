@@ -135,7 +135,6 @@ repeat
 
 If using a 'not equal' comparison, this is written as '~='
 
-
 While loops will execute the looped code as as long as the condition is true.
 
 
@@ -148,10 +147,26 @@ end
 ------------------
 
 
+Functions are able to return multiple values from a single functions. Below,
+ is a function that utilizes a loop:
 
 
+foo.lua
+------------------
+function say(msg)
+  if msg == nil then msg = "Hello!" end
+  return msg, os.date()
+end
 
+print(say())
+------------------
 
+Note the 'end' terminator, this is required to end a function.
+
+When the 'say()' function is invoked, if no arguments are passed, the variable
+ 'msg' will then be set to 'nil'. This will then assign the 'msg' variable to
+  the string "Hello!", followed by returning the message and the operating
+   system's data and time.
 
 
 

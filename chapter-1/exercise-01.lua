@@ -70,8 +70,13 @@ while wait_time < 10 do
   wait_time = wait_time + 1
 end
 
-
+print("")
 
 -- Functions!
 
+function say(msg)
+  if msg == nil then msg = "Hello!" end
+  return msg, os.date()
+end
 
+print(say())
