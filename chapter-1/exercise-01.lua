@@ -22,6 +22,11 @@ type("Lua") -- string
 
 type(my_array) -- table
 
+
+
+
+-- Conditionals!
+
 wait_time = 15
 patience = 20
 
@@ -31,6 +36,42 @@ if wait_time > 10 then patience = 0 end
 
 print("Patience: ", patience)
 
-wait_time = 10
+--wait_time = 20
+
+if wait_time == 10 then
+  print("Ten, an appropriate wait!")
+
+else
+  print("\nSomething that isn't ten, that is not an appropriate wait!\n")
+
+end
+
+
+
+
+-- Loops!
+
+a = 0
+
+repeat
+  a = a + 1
+  print(a)
+
+  until a == 10
+
+
+print("")
+
+
+wait_time = 0
+
+while wait_time < 10 do
+  print("We're on it!")
+  wait_time = wait_time + 1
+end
+
+
+
+-- Functions!
 
 

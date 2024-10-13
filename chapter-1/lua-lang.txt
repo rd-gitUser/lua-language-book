@@ -117,13 +117,35 @@ else
 end
 ------------------
 
+Conditionals must be terminated with an 'end' terminator. This is required.
+
+Writing loops can be done with the 'repeat' keyword.
 
 
+foo.lua
+------------------
+a = 0
+
+repeat
+  a = a + 1
+  print(a)
+
+  until a == 10
+------------------
+
+If using a 'not equal' comparison, this is written as '~='
 
 
+While loops will execute the looped code as as long as the condition is true.
 
 
-
+foo.lua
+------------------
+while wait_time < 10 do
+  print("We're on it!")
+  wait_time = wait_time + 1
+end
+------------------
 
 
 
