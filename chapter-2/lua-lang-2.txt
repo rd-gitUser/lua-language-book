@@ -1,0 +1,99 @@
+==================================
+Lua - Environment
+==================================
+
+Lua needs three pieces of software to setup a development environment:
+- Text Editor
+- Lua Interpreter
+- Lua Compiler
+
+
+The Lua interpreter allows the typing of command and have them immediately
+ be executed. The interpreter stops the execution of a Lua file in case it
+  encounters an error.
+
+
+The Lua compiler is needed when Lua is being extended to other languages
+ and applications.
+
+
+
+==================================
+Lua - Basic Syntax
+==================================
+
+To run a lua program, there are two ways in Linux.
+
+1.) With a file name 'foo.lua', the 'lua' command can be run to execute.
+
+/bin/bash
+------------------
+lua foo.lua
+------------------
+
+
+2.) The other way, is to make the 'foo.lua' file executable, which then needs
+     a line added to have the BASH command shell use 'lua' to execute.
+
+foo.lua
+------------------
+#!/usr/local/bin/lua
+
+print("\nTest\n")
+------------------
+
+
+/bin/bash
+------------------
+chmod 744 ./foo.lua
+
+./foo.lua
+------------------
+
+
+
+Lua programs consist of various tokens. These tokens can be a:
+- keyword
+- identifier
+- constant
+- string literal
+- symbol
+
+In the short Lua program below, there are three tokens:
+
+
+foo.lua
+------------------
+#!/usr/local/bin/lua
+
+io.write("Hello world, from ",_Version,"!\n")
+------------------
+
+
+Comments blocks are helping text in a Lua program, which are ignored by the
+ interpreter. Commens start with the characters '--[[' and end with '--]]'
+
+A single line comment is annotated with the '--' characters.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

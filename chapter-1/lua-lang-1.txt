@@ -167,17 +167,3 @@ When the 'say()' function is invoked, if no arguments are passed, the variable
  'msg' will then be set to 'nil'. This will then assign the 'msg' variable to
   the string "Hello!", followed by returning the message and the operating
    system's data and time.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
