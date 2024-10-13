@@ -103,13 +103,22 @@ In the table below are reserved keywords that cannot be assigned as identifiers
 └────────────┴─────────┴───────┴────────┘
 
 
+If a line in Lua has whitespace, (blanks, tabs, newline characters, and
+ comments), then these lines are completely ignored.
+
+However, whitespace is needed to separate one statement from another. For
+ example, when defining a local varaible, a whitespace character is needed.
+
+foo.lua
+------------------
+local age
+------------------
 
 
+In the code below, whitespace is not necessaraly needed between 'fruit' and '=',
+ and not needed between '=' and 'apples', but they can be added if desired.
 
-
-
-
-
-
-
-
+foo.lua
+------------------
+fruit = apples + oranges
+------------------
