@@ -1,5 +1,5 @@
 ==================================
-Lua - Varialbes
+Lua - Variables
 ==================================
 
 In general, variables are a name given to a stroage area that programs
@@ -88,7 +88,6 @@ variable v1 is assigned the value of n1,
 This can lead to some neat things for variable assignment:
 
 
-
 foo.lua
 ------------------
 -- Variable definition
@@ -113,16 +112,44 @@ print("value of f:", f)
 
 
 
+Lua considers varaible expressions as having one of two values:
 
-/bin/bash
-------------------
-lua foo.lua
-------------------
+1.) lvalue
+- A memroy location named that is called "lvalue", this value can either 
+   be on the left-hand or right-hand of an assignment.
+
+2.) rvalue
+- A memory location that is stored in some address in memory. An rvalue
+   expression cannot have a value assigned to it, so it is only allowed
+    to appear on the right-hand side, but not theleft hand side.
+
+- An example of an 'lvalue' would be a variable name.
+
+- An example of an 'rvalue' would be a number. A number can only appear on
+ the right side.
 
 
+A valid statement would be:
 
 foo.lua
 ------------------
-bar = "String"
-type(bar)
+g = 20
 ------------------
+
+
+A non-valid statement would be:
+
+foo.lua
+------------------
+10 = 20
+------------------
+
+
+It is also possible to have multiple lvalues and rvalues in the same line.
+
+foo.lua
+------------------
+g, l = 20, 30
+------------------
+
+
