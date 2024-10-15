@@ -1,0 +1,35 @@
+==================================
+Lua - Varialbes
+==================================
+
+In general, variables are a name given to a stroage area that programs
+ can manipulate. It can hold different types of values including
+  functions and tables.
+
+
+In Lua, there are three types of variables:
+
+1.) Global Variables
+  - All variables are global unless declared as local
+
+2.) Local Variables
+  - A varaible that has a scope limited within the function
+     it is declared in
+
+3.) Table Fields
+  - A special type of variable that can hold anything except
+     for nil including functions
+
+
+/bin/bash
+------------------
+lua foo.lua
+------------------
+
+
+
+foo.lua
+------------------
+bar = "String"
+type(bar)
+------------------
