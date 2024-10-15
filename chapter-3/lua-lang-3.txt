@@ -21,6 +21,99 @@ In Lua, there are three types of variables:
      for nil including functions
 
 
+Variable definition means to tell the interpreter where and how much create
+ the storage fo a variable.
+
+The base syntax of a variable declaration is
+
+------------------
+type variable_list
+------------------
+
+Where the word 'type' is optionally local, or type specified makig it global.
+
+The world 'variable_list' means that a declaration may consist of one or
+ more identifier names spearated by commas.
+
+
+foo.lua
+------------------
+local i, j
+local i
+local a,c
+------------------
+
+
+All three lines above declare and defines varialbes, with the line
+ 'local i,j' meaning that both variables 'i' and 'j' are defined, but are
+   limited to a local scope.
+
+Variables can also be initialized, which means to assign a value, in their
+ declaration.
+
+The base syntax of a variable declaration and initialization is:
+
+
+------------------
+type variable_list = value_list;
+------------------
+
+
+Some examples are:
+
+
+foo.lua
+------------------
+local d, f = 5, 10
+d, f = 5, 10;
+d, f = 10
+------------------
+
+
+In the first line above, variables 'd' and 'f' are local variables
+In the second line above, variable d and f are global variables.
+In the third line above, 'd' and 'f' are global, and 'f' is nil.
+
+In the above code, this follows an order of assignment:
+
+
+------------------
+v1, v2 = n1, n2
+------------------
+
+variable v1 is assigned the value of n1,
+ variable v2 is assigned the value of n2
+
+
+This can lead to some neat things for variable assignment:
+
+
+
+foo.lua
+------------------
+-- Variable definition
+local a, b
+
+-- Variable Initialization
+a = 10
+b = 30
+print("value of a:", a)
+print("value of b:", b)
+
+-- Swapping of variables
+
+b, a = a, b
+print("value of a:", a)
+print("value of b:", b)
+
+f = 70.0/3.0
+print("value of f:", f)
+------------------
+
+
+
+
+
 /bin/bash
 ------------------
 lua foo.lua
