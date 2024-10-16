@@ -102,7 +102,7 @@ Relational Operators
 -- In the table below, assume A = 10 and B = 20 --
 
 ┌──────────┬─────────────────────────────────────┬────────────────┐
-│ Operator │             Descriptio              │   Example      │
+│ Operator │             Description             │   Example      │
 ├──────────┼─────────────────────────────────────┼────────────────┤
 │    ==    │ Checks if values are equal          │ (A == B) false │
 ├──────────┼─────────────────────────────────────┼────────────────┤
@@ -116,4 +116,20 @@ Relational Operators
 ├──────────┼─────────────────────────────────────┼────────────────┤
 │    <=    │ Checks if right is greater or equal │ (A <= B) true  │
 └──────────┴─────────────────────────────────────┴────────────────┘
+
+
+
+Logical Operators
+-- Assume A is true, and that B is false
+
+┌──────────┬─────────────────────────────────────┬─────────────────┐
+│ Operator │             Description             │    Example      │
+├──────────┼─────────────────────────────────────┼─────────────────┤
+│   and    │ If both are true, then return true  │ (A and B) false │
+├──────────┼─────────────────────────────────────┼─────────────────┤
+│    or    │ If one is true, then return true    │ (A or B) true   │
+├──────────┼─────────────────────────────────────┼─────────────────┤
+│   not    │ Reverses the logical state          │ !(A and B) true │
+└──────────┴─────────────────────────────────────┴─────────────────┘
+
 
