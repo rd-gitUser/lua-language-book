@@ -1,0 +1,119 @@
+==================================
+Lua - Data Types
+==================================
+
+Lua is dynamically typed. This means that the data type of the variable
+ is not determiend by the variable itself, but by the value that it is
+  assigned.
+
+The list of the data types for the values are:
+
+
+┌───────┬─────────────────────────────────────────────────┐
+│ Sr.No │           Value Type & Description              │
+├───────┼──────────┬──────────────────────────────────────┤
+│   1   │    nil   │ having no(nil) data                  │
+├───────┼──────────┼──────────────────────────────────────┤
+│   2   │  boolean │ true or false, condition checking    │
+├───────┼──────────┼──────────────────────────────────────┤
+│   3   │  number  │ real(double precision float) numbers │
+├───────┼──────────┼──────────────────────────────────────┤
+│   4   │  string  │ an array of characters               │
+├───────┼──────────┼──────────────────────────────────────┤
+│   5   │ function │ method in C or Lua                   │
+├───────┼──────────┼──────────────────────────────────────┤
+│   6   │ userdata │ arbitrary C data                     │
+├───────┼──────────┼──────────────────────────────────────┤
+│   7   │  thread  │ separate threads for coroutines      │
+├───────┼──────────┼──────────────────────────────────────┤
+│   8   │  table   │ object for many kinds of data        │
+└───────┴──────────┴──────────────────────────────────────┘
+
+For the table, is can represent: - ordnary arrays synmbol tables
+- sets
+- records
+- graphs
+- trees
+
+It can hold any data with the exception of nil.
+
+
+The function called 'type' enables the ability to know the type
+ of a variable:
+
+
+foo.lua
+------------------
+print(type("What is my type")) --> string
+
+t = 10
+
+print(type(5.8*t)) -- number
+print(type(true)) -- boolean
+print(type(print)) -- function
+print(type(nil)) -- nil
+print(type(type(ABC))) -- string
+------------------
+
+
+The default behavior or variables is to point to nil until they
+ are assigned a value or initialized. In Lua, zero and empty strings
+  are considered true in case of condition checks.
+
+So be careful of boolean operations (foreshadowing)
+
+
+
+==================================
+Lua - Operators
+==================================
+
+Lua has four different kinds of operations:
+- Arithmetic Operations
+- Relational Operators
+- Logical Operators
+- Misc Operators
+
+
+Arithmetic Operators:
+-- In the table below, assume A = 10, and B = 20 --
+
+┌──────────┬───────────────────────────────────┬─────────────┐
+│ Operator │            Description            │   Example   │
+├──────────┼───────────────────────────────────┼─────────────┤
+│    +     │ Adds two operands                 │ A + B = 30  │
+├──────────┼───────────────────────────────────┼─────────────┤
+│    -     │ Subtracts second from first       │ A - B = -10 │
+├──────────┼───────────────────────────────────┼─────────────┤
+│    *     │ Multiply both operands            │ A * B = 200 │
+├──────────┼───────────────────────────────────┼─────────────┤
+│    /     │ Divide numerator by de-numerator  │ B / A = 2   │
+├──────────┼───────────────────────────────────┼─────────────┤
+│    %     │ Modulus, remainter after division │ B % A = 0   │
+├──────────┼───────────────────────────────────┼─────────────┤
+│    ^     │ Exponent Operator                 │ A^2 = 100   │
+├──────────┼───────────────────────────────────┼─────────────┤
+│    -     │ Unary, acts as negation           │ -A = -10    │
+└──────────┴───────────────────────────────────┴─────────────┘
+
+
+
+Relational Operators
+-- In the table below, assume A = 10 and B = 20 --
+
+┌──────────┬─────────────────────────────────────┬────────────────┐
+│ Operator │             Descriptio              │   Example      │
+├──────────┼─────────────────────────────────────┼────────────────┤
+│    ==    │ Checks if values are equal          │ (A == B) false │
+├──────────┼─────────────────────────────────────┼────────────────┤
+│    ~=    │ Checks if values are not equal      │ (A ~= B) true  │
+├──────────┼─────────────────────────────────────┼────────────────┤
+│    >     │ Checks if left side is greater      │ (A > B ) false │
+├──────────┼─────────────────────────────────────┼────────────────┤
+│    <     │ Checks if right side is greater     │ (A < B) true   │
+├──────────┼─────────────────────────────────────┼────────────────┤
+│    >=    │ Checks if left is greater or equal  │ (A >= B) false │
+├──────────┼─────────────────────────────────────┼────────────────┤
+│    <=    │ Checks if right is greater or equal │ (A <= B) true  │
+└──────────┴─────────────────────────────────────┴────────────────┘
+
