@@ -122,3 +122,13 @@ if ( not(a and b))
   else
     print("Line 4 - condition is not true")
 end
+
+print("")
+
+a = "Hello "
+b = "World"
+
+print("Concatenation of strings a with b is ", a..b)
+print("Length of b is ", #b)
+print("Lenght of b is ", #"Test")
+

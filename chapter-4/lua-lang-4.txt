@@ -133,3 +133,20 @@ Logical Operators
 └──────────┴─────────────────────────────────────┴─────────────────┘
 
 
+
+Miscellaneous Operators
+-- Used for concatenation and length
+-- # is called a unary operator.
+-- Assume A is "Hello ", and B is "World"
+
+┌──────────┬─────────────────────────────────┬────────────────────┐
+│ Operator │             Description         │    Example         │
+├──────────┼─────────────────────────────────┼────────────────────┤
+│    ..    │ Concatenates two strings        │ A..B = Hello World │
+├──────────┼─────────────────────────────────┼────────────────────┤
+│     #    │ Returns length of string        │ #"Hello" = 5       │
+└──────────┴─────────────────────────────────┴────────────────────┘
+
+
+
+
