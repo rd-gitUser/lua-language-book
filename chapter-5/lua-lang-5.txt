@@ -1,0 +1,42 @@
+==================================
+Lua - Loops
+==================================
+
+Some situations may occur where a block of code will need to be
+ executed several times. A loop allows a statement or group of statements to
+  be run mutliple times.
+
+
+Below are the different kinds of loops available in Lua.
+
+┌────────┬───────────────────────────────────────────────────────────────────┐
+│ Sr.No. │                   Loop type & Description                         │
+├────────┼───────────────────────────────────────────────────────────────────┤
+│   1    │ while loop                                                        │
+│        │                                                                   │
+│        │ Repeats a statement or group of statements while a given conditio │
+│        │  is true. The condition is tested before executing the loop body  │
+├────────┼───────────────────────────────────────────────────────────────────┤
+│   2    │ for loop                                                          │
+│        │                                                                   │
+│        │ Executes a sequence of statements multiple times and abbreviates  │
+│        │  the code that manages the loop variable                          │
+├────────┼───────────────────────────────────────────────────────────────────┤
+│   3    │ repeat...until loop                                               │
+│        │                                                                   │
+│        │ Repeats the operation of group of statements till the until       │
+│        │  condition is met                                                 │
+├────────┼───────────────────────────────────────────────────────────────────┤
+│   4    │ nested loop                                                       │
+│        │                                                                   │
+│        │ You can use one or more loops inside any other while, for or      │
+│        │  do..while loops.                                                 │
+└────────┴───────────────────────────────────────────────────────────────────┘
+
+
+
+The While Loop:
+- A loop statement that executes as long as a given condition is true.
+
+
+
