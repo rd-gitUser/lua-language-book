@@ -149,4 +149,28 @@ Miscellaneous Operators
 
 
 
+Operator recedence in Lua determins the grouping of terms in an expression.
+ Certain operators have ahigherprecedence than others, similar to the
+  order of operations in mathematics.
 
+Below is a table that shows the order of precedence in Lua.
+
+┌────────────────┬─────────────────────────────────┬────────────────────┐
+│    Category    │            Operator             │    Associativity   │
+├────────────────┼─────────────────────────────────┼────────────────────┤
+│     Unary      │              not # -            │    Right to Left   │
+├────────────────┼─────────────────────────────────┼────────────────────┤
+│ Concatenation  │               ..                │    Right to Left   │
+├────────────────┼─────────────────────────────────┼────────────────────┤
+│ Multiplicative │             * / %               │    Left to Right   │
+├────────────────┼─────────────────────────────────┼────────────────────┤
+│    Additive    │               +-                │    Left to Right   │
+├────────────────┼─────────────────────────────────┼────────────────────┤
+│   Relational   │          <> <= >= == ~=         │    Left to Right   │
+├────────────────┼─────────────────────────────────┼────────────────────┤
+│    Equality    │             == ~=               │    Left to Right   │
+├────────────────┼─────────────────────────────────┼────────────────────┤
+│  Logical AND   │              And                │    Left to Right   │
+├────────────────┼─────────────────────────────────┼────────────────────┤
+│  Logical OR    │              Or                 │    Left to Right   │
+└────────────────┴─────────────────────────────────┴────────────────────┘

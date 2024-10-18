@@ -132,3 +132,21 @@ print("Concatenation of strings a with b is ", a..b)
 print("Length of b is ", #b)
 print("Lenght of b is ", #"Test")
 
+print("")
+
+a = 20
+b = 10
+c = 15
+d = 5
+
+e = (a + b) * c / d; -- (30 * 15) / 5
+print("Value of (a + b) * c / d is: ", e)
+
+e = ((a + b) * c) / d; -- (30 * 15) / 5
+print("Value of ((a + b) * c) / d is: ", e)
+
+e = (a + b) * (c / d); -- (30) * (15/3)
+print("Value of (a + b) * (c / d) is: ", e)
+
+e = a + (b * c) / d; -- 20 + (150/5)
+print("Value of a + (b * c) / d is: ", e)
