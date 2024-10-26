@@ -36,6 +36,7 @@ Below are the different kinds of loops available in Lua.
 
 
 The While Loop:
+----------------------------------
 - A loop statement that executes as long as a given condition is true.
 
 
@@ -71,6 +72,7 @@ end
 
 
 The for loop:
+----------------------------------
 - A loop statement that can run code a specific number of times.
 
 
@@ -97,9 +99,36 @@ The control flow for a "for" loop is:
 
 
 
+The repeat...until loop
+----------------------------------
+- A loop that runs a statement first, then checks if a condition is true
+   or not
+
+
+The basic syntax of a repeat...until loop is:
+
+
+foo.lua
+------------------
+repeat
+  statement(s)
+until(condition)
+------------------
+
+The important thing to look at, is that the "until" condition is at the end
+ of the loop, to evaluate if the loop should be broken or not.
 
 
 
+Lua allows the user of nested loops, or a loop that runs inside of another
+ loop.
+
+
+
+
+==================================
+Lua - Loop Control Statements
+==================================
 
 
 
