@@ -39,4 +39,76 @@ The While Loop:
 - A loop statement that executes as long as a given condition is true.
 
 
+The basic syntax of a while loop is:
+
+
+foo.lua
+------------------
+while (condition)
+do
+  statement(s)
+end
+------------------
+
+
+Where "statements" can either be a statement or a block of statements and
+ "condition" can be any expression that can be true or non-zero.
+
+Whenever a conidtion becomes false, then the loop breaks.
+
+
+
+foo.lua
+------------------
+a = 10
+while (a < 20)
+do
+  print("The value of a:", a)
+  a = a + 1
+end
+------------------
+
+
+
+The for loop:
+- A loop statement that can run code a specific number of times.
+
+
+The basic syntax of a for loop is:
+
+
+foo.lua
+------------------
+for init, max/min value, increment
+do
+  statement(s)
+end
+------------------
+
+
+The control flow for a "for" loop is:
+- The initialization statement is run first, and only once.
+- A condition check that is run and evaluated before the loop statements are
+   run
+- After the body of the "for" loop executes, the increment statement is then
+   run
+- The condition is evaluated again as the max/min value. One the statement
+   returns fale, then the loop breaks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
