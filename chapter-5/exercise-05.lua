@@ -45,3 +45,19 @@ while(a < 20)
     end
   end
 
+
+for i = 0, 3, 1
+  do
+    for b = 0, 10, 1
+      do
+        if (b < 5)
+          then
+            print("Value of b: ", b)
+          else
+            break
+        end
+      end
+    print("Value of i: ", i, "\n")
+  end
+
+
