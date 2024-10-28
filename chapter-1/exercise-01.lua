@@ -56,8 +56,7 @@ a = 0
 repeat
   a = a + 1
   print(a)
-
-  until a == 10
+until a == 10
 
 
 print("")
@@ -75,7 +74,9 @@ print("")
 -- Functions!
 
 function say(msg)
-  if msg == nil then msg = "Hello!" end
+  if msg == nil
+    then msg = "Hello!"
+  end
   return msg, os.date()
 end
 
