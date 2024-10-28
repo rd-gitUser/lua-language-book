@@ -6,7 +6,7 @@ if (a < 20) then
   print("a is less than 20");
 end
 
-print("Value of a: ", a, "\n");
+print("\nvalue of a: ", a, "\n");
 
 
 a = 100;
@@ -35,3 +35,14 @@ else
 end
 
 print("\nThe value of a is: ", a , "\n");
+
+print("\n")
+
+a = 100;
+b = 200;
+
+if(a == 100) then
+  if(b == 200) then
+    print("The value of a is 100, and b is 200.")
+  end
+end

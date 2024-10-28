@@ -152,3 +152,33 @@ print("Exact value of a is: ", a "\n");
 
 
 
+Nested "if" statements
+----------------------------------
+
+Lua will always allow the ability to nest if-else statements. That is,
+ the statements after an "if" condition can result in another "if" condition.
+
+
+The syntax for a nested if statement is:
+------------------
+if (boolean_expression 1) then
+  --execute code
+  if(boolean_expression 2) then
+    --second code to execute
+  end
+end
+------------------
+
+
+
+foo.lua
+------------------
+a = 100
+b = 200
+
+if(a == 100) then
+  if(b == 200) then
+    print("Value of a is 100, and b is 200");
+  end
+end
+------------------
