@@ -10,7 +10,6 @@ Lua provides numerous built-in methods that a program can call, such as
 
 
 The syntax of a function is:
-----------------------------------
 
 ------------------
 optional_function_scope function function_name (arguments)
