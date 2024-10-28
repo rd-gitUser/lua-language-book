@@ -130,14 +130,40 @@ Lua allows the user of nested loops, or a loop that runs inside of another
 Lua - Loop Control Statements
 ==================================
 
+The loop control statement that Lua supports is "break".
+- "break" terminates the loop and transfers execution to the statement
+   immediately following the loop or switch.
+
+If using a nested loop, a loop inside of another loop, the break statement will
+ stop the execution of the innermost loop and execute the code immediately
+  proceeding it.
+
+An example of a "break" statement is:
 
 
+foo.lua
+------------------
+a = 10
+
+while (a < 20) do
+  print("value of a:", a)
+  a = a + 1
+  if (a > 15) then
+    break
+  end
+end
+------------------
 
 
+Lua can also have loops run infiniately. When setting up a condition with
+ a loop that does not allow the loop to exit.
+
+An example of an infinite loop is:
 
 
-
-
-
-
-
+foo.lua
+------------------
+while (true) do
+  print("This loop will run forever")
+end
+------------------
