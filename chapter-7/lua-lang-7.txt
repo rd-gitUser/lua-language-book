@@ -231,3 +231,67 @@ No. 4, the "StartIndex" and "EndIndex" are optional.
 
 
 
+Some examples of how to manipulate strings with the build-in methods are:
+
+
+upper-lower.lua
+------------------
+string1 = "Lua";
+print(stirng.upper(string1))
+print(string.lower(string1))
+------------------
+
+
+
+replace-substring.lua
+------------------
+string = "Lua Tutorial"
+
+newstring = string.gsub(string,"Tutorial", "Language")
+print("The new string is: "..newstring) -- "Lua Language"
+------------------
+
+
+
+find-and-reverse.lua
+------------------
+string = "Lua Tutorial"
+
+print(string.find(string,"Tutorial"))
+reversedString = string.reverse(string)
+print("The new string is: "..reversedString)
+------------------
+
+
+
+formatting-string.lua
+------------------
+string1 = "Lua";
+string2 = "Tutorial";
+
+print(string.format("Basic formatting %s %s",string1,string2))
+------------------
+
+
+formatting-date.lua
+------------------
+date = 2;
+month = 1;
+year = 2014;
+
+print(string.format("Date format: %02d/%02d/%03d",date,month,year))
+------------------
+
+
+formatting-decimal.lua
+------------------
+print(string.format("%.4f",1/3))
+------------------
+
+
+
+
+Character and Byte Representations
+----------------------------------
+
+

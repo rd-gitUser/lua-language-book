@@ -61,4 +61,40 @@ print("String 3 is",string3);
 
 print("\n");
 
+-- Upper and lowercase
 
+string1 = "Lua";
+print(string.upper(string1));
+print(string.lower(string1));
+
+print("\n");
+
+-- Replace substring
+
+string = "Lua Tutorial";
+newstring = string.gsub(string,"Tutorial","Language");
+print("The new string is: "..newstring);
+
+print("\n");
+
+-- Find and Reverse string
+string = "Lua Tutorial";
+print(string.find(string,"Tutorial"));
+reversedString = string.reverse(string);
+print("The new string is: "..reversedString);
+
+print("\n");
+
+string1 = "Lua";
+string2 = "Tutorial";
+number1 = 10;
+number2 = 20;
+-- string formatting
+print(string.format("Basic formatting %s %s",string1,string2))
+-- Date formatting
+date = 2;
+month = 1;
+year = 2014;
+print(string.format("Date formatting %02d/%02d/%03d", date, month, year))
+-- Decimal formatting
+print(string.format("%.4f",1/3))
