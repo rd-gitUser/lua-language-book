@@ -51,5 +51,101 @@ end
 If a function uses arguments, the function must declare the varaibles that
  accept the values of the arguments. This are called "formal parameters".
 
+Formal parameters behave like local varaibles in the function, they are created
+ on entry into the function and are destroyed when exiting.
+
+When the function is invoked, the control of the program changes over to the
+ process that is running the invoked function. After the end of the function
+  the program then returns program control back to the main program.
+
+
+
+Assigning and Passing Functions
+----------------------------------
+
+Functions can be assigned to variables, and can be passed as parameters to
+ other functions.
+
+An example of passing a function as another function's arguments:
+
+
+foo.lua
+------------------
+myprint = function(param)
+  print("This is my print function - ##",param,"##")
+end
+
+function add(num1, num2, functionPrint)
+  result = num1 + num2
+  functionPrint(result)
+end
+
+myprint(10);
+add(2,5,myprint);
+------------------
+
+
+
+Functions with Variable Arguments
+----------------------------------
+
+Functions are able to be made to pass variable arguements using "..." as a 
+ parameter. This allows anything to be added.
+
+
+foo.lua
+------------------
+function average(...);
+  result = 0;
+  local arg = {...}
+  for i, v in ipairs(arg) do
+    result = result + v
+  end
+  return result/#arg
+end
+print("The average is: ",average(10,5,3,4,5,6))
+------------------
+
+
+When checking the value of args, this results in a table, and a memory address:
+- print(args) = table: 0x1e74de60
+
+Iterating through a table of values will looks to be done with a "for in" loop.
+
+
+
+==================================
+Lua - Strings
+==================================
+
+Strings are a sequence of characters. Lua allows for strings to be initialized
+ in three ways:
+
+- single quotes
+- double quotes
+- between double brackets
+
+
+foo.lua
+------------------
+string1 = "Lua";
+print("\"String1 is: \"",string1);
+
+string2 = 'Tutorial';
+print("\"String2 is: \"",string2);
+
+string3 = [[Lua Tutorial]]
+print("String 3 is",string3);
+------------------
+
+
+Escape sequence characters in strings are used to change the normal
+ interpretations of characters. While a regular double quote may not be usable
+  in a string, as they usually are used to identify the start and end points of
+   a string, they can be interpreted literally as a character through an
+    escape sequence.
+
+
+
 
 
