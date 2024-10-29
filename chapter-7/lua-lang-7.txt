@@ -146,6 +146,88 @@ Escape sequence characters in strings are used to change the normal
     escape sequence.
 
 
+┌─────────────────┬──────────────────────┐
+│ Escape Sequence │         Use          │
+├─────────────────┼──────────────────────┤
+│       \a        │         Bell         │
+├─────────────────┼──────────────────────┤
+│       \b        │       Backspace      │
+├─────────────────┼──────────────────────┤
+│       \f        │       Formfeed       │
+├─────────────────┼──────────────────────┤
+│       \n        │       New line       │
+├─────────────────┼──────────────────────┤
+│       \r        │    Carriage return   │
+├─────────────────┼──────────────────────┤
+│       \t        │          Tab         │
+├─────────────────┼──────────────────────┤
+│       \v        │      Vertical Tab    │
+├─────────────────┼──────────────────────┤
+│       \\        │       Backslash      │
+├─────────────────┼──────────────────────┤
+│       \"        │     Double Quotes    │
+├─────────────────┼──────────────────────┤
+│       \'        │     Single Quotes    │
+├─────────────────┼──────────────────────┤
+│       \[        │ Left square bracket  │
+├─────────────────┼──────────────────────┤
+│       \]        │ Right square bracket │
+└─────────────────┴──────────────────────┘
+
+
+Lua can also manipulate strings with built in methods as well.
+
+
+┌─────────┬────────────────────────────────────────────────────────┐
+│ Sr. No. │                 Method and Purpose                     │
+├─────────┼────────────────────────────────────────────────────────┤
+│    1    │ string.upper(arg)                                      │
+│         │                                                        │
+│         │ - Returns a capitlized representation of the arugment  │
+├─────────┼────────────────────────────────────────────────────────┤
+│    2    │ string.lower(arg)                                      │
+│         │                                                        │
+│         │ - Returns a lower case representation of the arugment  │
+├─────────┼────────────────────────────────────────────────────────┤
+│    3    │ string.gsub(mainString,findString,replaceString)       │
+│         │                                                        │
+│         │ - Returns a string by replacing occurences of          │
+│         │    findString with replaceString                       │
+├─────────┼────────────────────────────────────────────────────────┤
+│    4    │ string.find(mainString,findString,StartIndex,EndIndex) │
+│         │                                                        │
+│         │ - Returns the start index and end index of the         │
+│         │    findString in the main string and nil if not found  │
+├─────────┼────────────────────────────────────────────────────────┤
+│    5    │ string.reverse(argument)                               │
+│         │                                                        │
+│         │ - Returns a string by reversing the characters of the  │
+│         │    passed string                                       │
+├─────────┼────────────────────────────────────────────────────────┤
+│    6    │ string.format(...)                                     │
+│         │                                                        │
+│         │ - Returns a formatted string                           │
+├─────────┼────────────────────────────────────────────────────────┤
+│    7    │ string.char(arg) and string.byte(arg)                  │
+│         │                                                        │
+│         │ - Returns internal numeric and character               │
+│         │    representations of input argument                   │
+├─────────┼────────────────────────────────────────────────────────┤
+│    8    │ string.len(arg)                                        │
+│         │                                                        │
+│         │ - Returns a length of the passed string                │
+├─────────┼────────────────────────────────────────────────────────┤
+│    9    │ string.rep(string, n)                                  │
+│         │                                                        │
+│         │ - Returns a string by repeating the same string n      │
+│         │    number of times                                     │
+├─────────┼────────────────────────────────────────────────────────┤
+│   10    │ ..                                                     │
+│         │                                                        │
+│         │ - Thus operator concatentates two strings              │
+└─────────┴────────────────────────────────────────────────────────┘
+
+No. 4, the "StartIndex" and "EndIndex" are optional.
 
 
 
