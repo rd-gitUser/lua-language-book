@@ -294,4 +294,54 @@ print(string.format("%.4f",1/3))
 Character and Byte Representations
 ----------------------------------
 
+The "byte" and "character" (char) methods convert characters to bytes, and
+ bytes to characters.
 
+
+
+foo.lua
+------------------
+-- first character
+print(string.byte("Lua"));
+
+-- third character
+print(string.byte("Lua",3));
+
+-- first character start from the last
+print(string.byte("Lua",-1));
+
+-- second character
+print(string.byte("Lua"),2);
+
+-- second character from last
+print(string.byte("Lua"),-2);
+
+-- Internal ASCII converstion
+print(stirng.char(97))
+------------------
+
+
+
+
+Other Common Functions
+----------------------------------
+
+Other common string manipulations include concatenation, finding length of
+ a string, and repeating the same string multiple times.
+
+
+foo.lua
+------------------
+string1 = "Lua";
+string2 = "Tutorial";
+
+-- concatenation
+print("Concatenated string: ",string1..string2);
+
+-- length of string
+print("Leng of straing1 is: ",string.len(string1));
+
+-- repeat strings
+repeatedString = string.rep(string1,3);
+print(repeatedString);
+------------------

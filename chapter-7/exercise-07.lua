@@ -98,3 +98,29 @@ year = 2014;
 print(string.format("Date formatting %02d/%02d/%03d", date, month, year))
 -- Decimal formatting
 print(string.format("%.4f",1/3))
+
+print("\n");
+
+print(string.byte("Lua"));
+
+print(string.byte("Lua",3));
+
+print(string.byte("Lua",-1));
+
+print(string.byte("Lua",2));
+
+print(string.byte("Lua",-2));
+
+print(string.char(97));
+
+print("\n");
+
+string1 = "Lua";
+string2 = "Tutorial";
+
+print("Concatenated string",string1..string2);
+
+print("Length of string1 is: ",string.len(string1));
+
+repeatedString = string.rep(string1,3);
+print(repeatedString);
