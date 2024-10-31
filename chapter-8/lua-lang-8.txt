@@ -1,0 +1,167 @@
+==================================
+Lua - Arrays
+==================================
+
+Arrays are ordered arrangements of objects that can be one-dimensional,
+ containing a collection of rows, or multi-dimensional containing multiple
+  rows and columns.
+
+A standard one-dimensional array would be:
+
+
+foo.lua
+------------------
+array = {"Lua","Tutorial"}
+
+for i = 0, 2 do
+  print(array[i]);
+end
+------------------
+
+
+This will result in the output being:
+
+nil
+Lua
+Tutorial
+
+In Lua, arrays start at index 1 rather than index 0, and negative index
+ numbers is possible as ll when initialized using a for loop.
+
+
+
+foo.lua
+------------------
+array = {}
+
+for i = -2, 2 do
+  array[i] = i * 2;
+end
+
+for i = -2,2 do
+  print(array[i]);
+end
+------------------
+
+
+
+Multidimensional arrays can be created as well, this is like an array
+ that stores arrays in each index.
+
+
+foo.lua
+------------------
+array = {};
+maxRows = 3;
+maxColumns = 3;
+
+for row=1,maxRows do
+  for col=1 maxColumns do
+    array[row * maxColumns + col] = row * col
+  end
+end
+
+for row = 1,maxRows do
+  for col = 1,maxColumns do
+    print(array[row * maxColumns + col] = row * col;
+  end
+end
+------------------
+
+
+While this method will create an array, the additional math being used will
+ result in Index 1, 2, and 3 being nil. The start of the array will begin at
+  index 4.
+
+Having additional index values that have nil does not store any additional
+ values in a Lua array. The three empty indexes will not take up additional
+  memory.
+
+
+
+
+
+==================================
+Lua - Iterators
+==================================
+
+Iterators are what enables traversal through elements of a collection or
+ container. The Lua language referes to these complex data types as tables.
+
+A generic "for" iterator provides access to key and value pairs.
+
+
+
+foo.lua
+------------------
+array = {"Lua", "Tutorial"}
+
+for key,value in ipairs(array) do
+  print(key, value);
+end
+------------------
+
+
+This will result in the output:
+1 Lua
+2 Tutorial
+
+
+Lua has a default iterator function "ipairs", to iterate through arrays.
+
+
+One kind of iterator that can be used is a "Stateless Iterator", which is an
+ iterator that does not retain any state. An example of a stateless iterator
+  is:
+
+
+foo.lua
+------------------
+function square(iteratorMaxCount,currentNumber)
+  if currentNumber < iteratorMaxCount then
+    currentNumber = currentNumber + 1
+    return currentNumber, currentNumber*currentNumber
+  end
+end
+
+for i, n in square,3,0 do
+  print(i,n)
+end
+------------------
+
+
+The function can then be changed to mimic the way that ipairs works:
+
+
+foo.lua
+------------------
+function square(iteratorMaxCount,currentNumber)
+  if currentNumber < iteratorMaxCount then
+    currentNumber = currentNumber + 1
+    return currentNumber,currentNumber*currentNumber
+  end
+end
+
+function squares(iteratorMaxCount)
+  return square,iteratorMaxCount,0
+end
+
+for i, n in squars(3) do
+  print(i,n);
+end
+------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
