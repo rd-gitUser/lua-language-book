@@ -81,6 +81,7 @@ Having additional index values that have nil does not store any additional
 
 
 
+
 ==================================
 Lua - Iterators
 ==================================
@@ -109,6 +110,10 @@ This will result in the output:
 
 Lua has a default iterator function "ipairs", to iterate through arrays.
 
+
+
+Stateless Iterators
+----------------------------------
 
 One kind of iterator that can be used is a "Stateless Iterator", which is an
  iterator that does not retain any state. An example of a stateless iterator
@@ -152,16 +157,60 @@ end
 ------------------
 
 
+The functions are stateless, as they do not retain any state. Each time the
+ function is called, it returns the next element of a collection. To hold
+  the state of an element, closures are then used.
 
 
 
 
+Stateful Iterators
+----------------------------------
+
+
+Closures are able to retain variable values across functions. To create a
+ closure, two functions are made, a clousre and a factory, the function
+  that creates the closure.
 
 
 
+An example of some code that is stateful is:
 
 
+foo.lua
+------------------
+array = {"Lua", "Tutorial"}
+
+function elementIterator(collection)
+  local index = 0
+  local count = #collection
+
+  -- the closure function is returned
+  return function()
+    index = index + 1
+
+    if index <= count then
+      -- return the current element of the iterator
+      return collection[index]
+    end
+  end
+end
+
+for element in elemenIterator(array) do
+  print(element)
+end
+------------------
 
 
+The small program above will return:
+Lua
+Tutorial
 
+
+In the program above, the funtion elementIterator has a method inside of it,
+ that uses the local variable "index" and "count" to return each element in
+  the collection by incremeneting the "index" variable each time it is called.
+
+We can crate our own function iterators using closures, and it can return
+ multiple elements for each of the times tha the elements are iteratred.
 

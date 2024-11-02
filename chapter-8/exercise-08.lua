@@ -82,6 +82,29 @@ for i, n in squares(3) do
 end
 
 
+print("\n");
+
+-- Stateful iterator, remembering statue using closures.
+
+array = {"Lua", "Tutorial"};
+
+function elementIterator(collection)
+  local index = 0;
+  local count = #collection;
+
+  -- the closure is returned
+  return function()
+      index = index + 1;
+
+      if index <= count then
+        -- return the currennt element of the iterator
+        return collection[index];
+    end
+  end
+end
 
 
+for element in elementIterator(array) do
+  print(element);
+end
 
