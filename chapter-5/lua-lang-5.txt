@@ -1,0 +1,169 @@
+==================================
+Lua - Loops
+==================================
+
+Some situations may occur where a block of code will need to be
+ executed several times. A loop allows a statement or group of statements to
+  be run mutliple times.
+
+
+Below are the different kinds of loops available in Lua.
+
+┌────────┬───────────────────────────────────────────────────────────────────┐
+│ Sr.No. │                   Loop type & Description                         │
+├────────┼───────────────────────────────────────────────────────────────────┤
+│   1    │ while loop                                                        │
+│        │                                                                   │
+│        │ Repeats a statement or group of statements while a given conditio │
+│        │  is true. The condition is tested before executing the loop body  │
+├────────┼───────────────────────────────────────────────────────────────────┤
+│   2    │ for loop                                                          │
+│        │                                                                   │
+│        │ Executes a sequence of statements multiple times and abbreviates  │
+│        │  the code that manages the loop variable                          │
+├────────┼───────────────────────────────────────────────────────────────────┤
+│   3    │ repeat...until loop                                               │
+│        │                                                                   │
+│        │ Repeats the operation of group of statements till the until       │
+│        │  condition is met                                                 │
+├────────┼───────────────────────────────────────────────────────────────────┤
+│   4    │ nested loop                                                       │
+│        │                                                                   │
+│        │ You can use one or more loops inside any other while, for or      │
+│        │  do..while loops.                                                 │
+└────────┴───────────────────────────────────────────────────────────────────┘
+
+
+
+The While Loop:
+----------------------------------
+- A loop statement that executes as long as a given condition is true.
+
+
+The basic syntax of a while loop is:
+
+
+foo.lua
+------------------
+while (condition)
+do
+  statement(s)
+end
+------------------
+
+
+Where "statements" can either be a statement or a block of statements and
+ "condition" can be any expression that can be true or non-zero.
+
+Whenever a conidtion becomes false, then the loop breaks.
+
+
+
+foo.lua
+------------------
+a = 10
+while (a < 20)
+do
+  print("The value of a:", a)
+  a = a + 1
+end
+------------------
+
+
+
+The for loop:
+----------------------------------
+- A loop statement that can run code a specific number of times.
+
+
+The basic syntax of a for loop is:
+
+
+foo.lua
+------------------
+for init, max/min value, increment
+do
+  statement(s)
+end
+------------------
+
+
+The control flow for a "for" loop is:
+- The initialization statement is run first, and only once.
+- A condition check that is run and evaluated before the loop statements are
+   run
+- After the body of the "for" loop executes, the increment statement is then
+   run
+- The condition is evaluated again as the max/min value. One the statement
+   returns fale, then the loop breaks.
+
+
+
+The repeat...until loop
+----------------------------------
+- A loop that runs a statement first, then checks if a condition is true
+   or not
+
+
+The basic syntax of a repeat...until loop is:
+
+
+foo.lua
+------------------
+repeat
+  statement(s)
+until(condition)
+------------------
+
+The important thing to look at, is that the "until" condition is at the end
+ of the loop, to evaluate if the loop should be broken or not.
+
+
+
+Lua allows the user of nested loops, or a loop that runs inside of another
+ loop.
+
+
+
+
+==================================
+Lua - Loop Control Statements
+==================================
+
+The loop control statement that Lua supports is "break".
+- "break" terminates the loop and transfers execution to the statement
+   immediately following the loop or switch.
+
+If using a nested loop, a loop inside of another loop, the break statement will
+ stop the execution of the innermost loop and execute the code immediately
+  proceeding it.
+
+An example of a "break" statement is:
+
+
+foo.lua
+------------------
+a = 10
+
+while (a < 20) do
+  print("value of a:", a)
+  a = a + 1
+  if (a > 15) then
+    break
+  end
+end
+------------------
+
+
+Lua can also have loops run infiniately. When setting up a condition with
+ a loop that does not allow the loop to exit.
+
+An example of an infinite loop is:
+
+
+foo.lua
+------------------
+while (true) do
+  print("This loop will run forever")
+end
+------------------

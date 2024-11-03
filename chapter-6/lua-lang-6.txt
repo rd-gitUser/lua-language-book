@@ -1,0 +1,184 @@
+==================================
+Lua - Decision Making
+==================================
+
+In decision making structures, a programmer specifies one or more conditions
+ to be evaluated as true or false. If the condition is true, then some
+  statements are then executed.
+
+In Lua, the language assumes that any condition that returns a "true" value,
+ and any non-nil values, as being a true statement.
+
+If a condition returns either a "false" or "nil", then Lua assumes the
+ condition is false.
+
+Lua has three different kinds of statements that are available for decisions:
+
+┌────────┬───────────────────────────────────────────────────────────────────┐
+│ Sr.No. │                   Statement & Description                         │
+├────────┼───────────────────────────────────────────────────────────────────┤
+│   1    │ if statement                                                      │
+│        │                                                                   │
+│        │ An if statement consists of a boolean expression followed by one  │
+│        │  or more statements                                               │
+├────────┼───────────────────────────────────────────────────────────────────┤
+│   2    │ if...else statements                                              │
+│        │                                                                   │
+│        │ An if statement can be followed by an optional else statement,    │
+│        │  which executes when the boolean expression is false.             │
+├────────┼───────────────────────────────────────────────────────────────────┤
+│   3    │ neted if statements                                               │
+│        │                                                                   │
+│        │ You can use one if or else if statement inside another if or      │
+│        │  else if statement                                                │
+└────────┴───────────────────────────────────────────────────────────────────┘
+
+
+The "if" statement:
+----------------------------------
+
+An "if" statement conssists of a Boolean expression followed by one or more
+ statements.
+
+The syntax of an "if" statement is:
+
+------------------
+if (bollean_expression) then
+  -- statements
+end
+------------------
+
+
+
+foo.lua
+------------------
+a = 10;
+
+if (a < 20) then
+  print("a is less than 20");
+end
+
+print("value of a is: ", a);
+------------------
+
+
+
+The "if...else" statement:
+----------------------------------
+
+An "if" statement can be followed by an optional "else" statement, which
+ executes when the "if" boolean expression if false.
+
+
+The syntax of an "if...else" statement is:
+
+------------------
+if(boolean_expression) then
+  -- statement when true
+else
+  -- statement when false
+end
+------------------
+
+
+
+foo.lua
+------------------
+a = 100;
+
+if (a < 20) then
+  print("a is less than 20");
+else
+  print("a is not less than 20");
+end
+
+print("value of a is: ", );
+------------------
+
+
+
+The "if...else if...else" statement:
+----------------------------------
+
+An "if" statement can be followed by an optional "else if...else" statement.
+
+There is a flow of how many different "else if...else" statements are managed.
+
+- An "if" can have zero, or one "else" statements. The "else" must come after
+   any other "else if" statements.
+- An "if" can have zero to many "else if" statements. All "else if" statements
+   must come before the final "else" statment.
+- If a single "else if" succeeds, then none of the remaining "else if" or
+   "else" statements will be tested.
+
+
+The syntax of an "if...else if...else" statement is:
+
+------------------
+if(boolean_expression 1) then
+  -- executes code
+else if(boolean_expression 2)
+  -- executes code
+else if(boolean expression 3)
+  -- executes code
+else
+  -- executes if none above are true
+end
+------------------
+
+
+
+
+foo.lua
+------------------
+a = 100;
+
+if (a == 10) then
+  print("Value of a is 10");
+
+elseif(a == 20)
+  print("Value of a is 20");
+
+elseif(a == 30)
+  print("Value of a is 30");
+
+else
+  print("Value of is is not 10, 20, or 30");
+
+end
+
+print("Exact value of a is: ", a "\n");
+------------------
+
+
+
+Nested "if" statements
+----------------------------------
+
+Lua will always allow the ability to nest if-else statements. That is,
+ the statements after an "if" condition can result in another "if" condition.
+
+
+The syntax for a nested if statement is:
+------------------
+if (boolean_expression 1) then
+  --execute code
+  if(boolean_expression 2) then
+    --second code to execute
+  end
+end
+------------------
+
+
+
+foo.lua
+------------------
+a = 100
+b = 200
+
+if(a == 100) then
+  if(b == 200) then
+    print("Value of a is 100, and b is 200");
+  end
+end
+------------------

@@ -1,0 +1,170 @@
+==================================
+What is Lua?
+==================================
+
+Lua consists of two parts - the Lua interpreter and the functioning software
+ system. The Lua interpreter is written in ANSI C, making it highly portable
+  on low memory and low storage systems.
+
+Lua scripts are text files that end in the '.lua' file extension. They can
+ then be run with the command:
+  lua foo.lua
+
+While Lua is interpreted, it precompiles code into an intermediary form
+ before running it. This code can be viewed by running a command:
+  lauc foo.lua
+
+This will creat a new file, 'luac.out', which will contain the compiled
+ instructions.
+
+For example, a lua file to print "Hello World!" would contain:
+
+
+foo.lua
+------------------
+print("\nHello World!\n")
+------------------
+
+
+Then, when running 'luac foo.lua', the output will be:
+
+
+luac.out
+------------------
+uaT�
+
+xV(w@�@exercise-01.lua���Q
+                          ��DF��print�
+Hello World!
+�������_ENV
+------------------
+
+
+
+
+
+==================================
+Lua Data Types
+==================================
+
+Lua has eight data types:
+- boolean
+- number
+- nil
+- string
+- function
+- userdata
+- table
+- thread
+
+Lua is dynamically typed, so not type qualification needs to exist to during
+ variable name declarations.
+
+The 'nil' type represent the absence of data, similar to null in
+ other languages.
+
+Tables are the only data structure of Lua. Tables are objects that represent
+ arrays, packages, or other data structures like sets. An array indici can
+  be a number, or any other value, such as a string, but it cannot be nil.
+   Tables are also not fix-sized and do not store only one kind of data.
+
+
+To start a Lua repl, after Lua is installed, run the command:
+
+/bin/bash
+------------------
+lua
+------------------
+
+Code can then be run to test small snippets in a Lua REPL environment.
+
+------------------
+my_array = {}   -- empty table
+my_array['first'] = 1      -- table array index 'first' set to number 1
+my_array['second'] = 2     -- table array index 'second' set to number 2
+my_array['second'] = false -- table array index 'second' set to boolean false
+
+type(44.3)      -- data type of '44.3' is a number
+type(false)     -- date type of 'false' is a boolean
+type("Lua")     -- data type of "Lua" is a string
+type(my_array)  -- data type of 'my_array' is a table
+------------------
+
+
+
+==================================
+Loops & Functions
+==================================
+
+-- Preface for variable delcarations:
+    Every variable in Lua is global, unless declared with 'local'.
+    Declaration with 'local' will force the varaible to become local to a chunk
+
+A simple if statement follows 'if-then-else' syntax.
+
+
+foo.lua
+------------------
+if wait_time > 10 then patients = 0 end
+
+if wait_time == 10 then
+-- do something
+
+else
+
+-- do another thing
+
+end
+------------------
+
+Conditionals must be terminated with an 'end' terminator. This is required.
+
+Writing loops can be done with the 'repeat' keyword.
+
+
+foo.lua
+------------------
+a = 0
+
+repeat
+  a = a + 1
+  print(a)
+
+  until a == 10
+------------------
+
+If using a 'not equal' comparison, this is written as '~='
+
+While loops will execute the looped code as as long as the condition is true.
+
+
+foo.lua
+------------------
+while wait_time < 10 do
+  print("We're on it!")
+  wait_time = wait_time + 1
+end
+------------------
+
+
+Functions are able to return multiple values from a single functions. Below,
+ is a function that utilizes a loop:
+
+
+foo.lua
+------------------
+function say(msg)
+  if msg == nil then msg = "Hello!" end
+  return msg, os.date()
+end
+
+print(say())
+------------------
+
+
+Note the 'end' terminator, this is required to end a function.
+
+When the 'say()' function is invoked, if no arguments are passed, the variable
+ 'msg' will then be set to 'nil'. This will then assign the 'msg' variable to
+  the string "Hello!", followed by returning the message and the operating
+   system's data and time.
