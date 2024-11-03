@@ -213,4 +213,3 @@ In the program above, the funtion elementIterator has a method inside of it,
 
 We can crate our own function iterators using closures, and it can return
  multiple elements for each of the times tha the elements are iteratred.
-
