@@ -42,3 +42,50 @@ print("mytable Element at index \"wow\" is: "..mytable["wow"].."\n");
 
 mytable = nil
 print("mytable is ", mytable);
+
+
+-- Table concatenating
+
+
+fruits = {"banana", "orange", "apple"}
+
+-- returns a concatenated string of table
+
+print("Concatenated string",table.concat(fruits));
+
+-- concat iwth a character
+
+print("Concatenated string",table.concat(fruits,","));
+
+-- concatenate based on index
+
+print("Concatenated string ",table.concat(fruits,", ",2,3),"\n")
+
+
+
+-- Table insert and remove
+
+fruits = {"banana", "orange", "apple"};
+
+-- adding a fruit at the end
+
+table.insert(fruits,"mango");
+print("The fruit as position 4 is: "..fruits[4]);
+
+-- inserting fuit and index 2
+
+table.insert(fruits,2,"apple");
+print("The fruit and index 2 is: "..fruits[2]);
+
+
+
+
+
+
+
+
+
+
+
+
+
